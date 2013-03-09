@@ -16,6 +16,7 @@
 		4EBAFAB516EB81E7008F5BDB /* libJNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA9C16EB81E7008F5BDB /* libJNetwork.a */; };
 		4EBAFABB16EB81E7008F5BDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBAFAB916EB81E7008F5BDB /* InfoPlist.strings */; };
 		4EBAFABE16EB81E7008F5BDB /* JNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFABD16EB81E7008F5BDB /* JNetworkTests.m */; };
+		4EFABD3216EB826A00F677C2 /* JRemoteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFABD3116EB826A00F677C2 /* JRemoteOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4EBAFABA16EB81E7008F5BDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EBAFABC16EB81E7008F5BDB /* JNetworkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JNetworkTests.h; sourceTree = "<group>"; };
 		4EBAFABD16EB81E7008F5BDB /* JNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNetworkTests.m; sourceTree = "<group>"; };
+		4EFABD3016EB826A00F677C2 /* JRemoteOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRemoteOperation.h; sourceTree = "<group>"; };
+		4EFABD3116EB826A00F677C2 /* JRemoteOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRemoteOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 		4EBAFAA116EB81E7008F5BDB /* JNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				4EFABD2F16EB825F00F677C2 /* Operations */,
 				4EBAFAA416EB81E7008F5BDB /* JNetwork.h */,
 				4EBAFAA616EB81E7008F5BDB /* JNetwork.m */,
 				4EBAFAA216EB81E7008F5BDB /* Supporting Files */,
@@ -143,6 +147,15 @@
 				4EBAFAB916EB81E7008F5BDB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EFABD2F16EB825F00F677C2 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				4EFABD3016EB826A00F677C2 /* JRemoteOperation.h */,
+				4EFABD3116EB826A00F677C2 /* JRemoteOperation.m */,
+			);
+			name = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EBAFAA716EB81E7008F5BDB /* JNetwork.m in Sources */,
+				4EFABD3216EB826A00F677C2 /* JRemoteOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +417,7 @@
 				4EBAFAC316EB81E7008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EBAFAC416EB81E7008F5BDB /* Build configuration list for PBXNativeTarget "JNetworkTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +426,7 @@
 				4EBAFAC616EB81E7008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
