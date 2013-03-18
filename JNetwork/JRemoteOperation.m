@@ -11,17 +11,17 @@
 @interface JRemoteOperation ()
 @property (nonatomic, readwrite, getter = isExecuting) BOOL executing;
 @property (nonatomic, readwrite, getter = isFinished) BOOL finished;
+@property (nonatomic, readwrite, strong) NSURLRequest* request;
+@property (nonatomic, readwrite, strong) NSMutableData* receivedData;
 @end
 
 @implementation JRemoteOperation
 {
-    NSURLRequest* _request;
     NSURLConnection* _connection;
-    NSMutableData* _receivedData;
     void (^_handler)(BOOL, NSData*, NSError*);
 }
 
-- (instancetype)initWithRequest:(NSURLRequest*)request handler:(void (^)(BOOL, NSData*, NSError*))handler
+- (instancetype)initWithRequest:(NSURLRequest*)request handler:(void (^)(BOOL success, NSData* data, NSError* error))handler
 {
     if((self = [super init]))
     {
@@ -46,7 +46,7 @@
 
     self.executing = YES;
     self.finished = NO;
-    _receivedData = [[NSMutableData alloc] init];
+    self.receivedData = [[NSMutableData alloc] init];
 
     _connection = [[NSURLConnection alloc] initWithRequest:_request delegate:self];
     [_connection start];
@@ -61,7 +61,7 @@
 {
     if([self isCancelled] == NO)
     {
-        [_receivedData appendData:data];
+        [self.receivedData appendData:data];
         return;
     }
 
@@ -75,7 +75,8 @@
     self.finished = YES;
     self.executing = NO;
 
-    _handler(YES, [_receivedData copy], nil);
+    if(_handler != nil)
+        _handler(YES, [self.receivedData copy], nil);
 }
 
 - (void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error
@@ -83,7 +84,8 @@
     self.finished = YES;
     self.executing = NO;
 
-    _handler(NO, nil, error);
+    if(_handler != nil)
+        _handler(NO, nil, error);
 }
 
 #pragma mark - Observers

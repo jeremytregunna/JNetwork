@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @interface JRemoteOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 @property (nonatomic, readonly, getter = isExecuting) BOOL executing;
 @property (nonatomic, readonly, getter = isFinished) BOOL finished;
 
-- (instancetype)initWithRequest:(NSURLRequest*)request handler:(void (^)(BOOL, NSData*, NSError*))handler;
+- (instancetype)initWithRequest:(NSURLRequest*)request handler:(void (^)(BOOL success, NSData* data, NSError* error))handler;
 
 @end

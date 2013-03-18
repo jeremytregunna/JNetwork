@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EB8307316F6980000004477 /* JJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8307216F6980000004477 /* JJSONOperation.m */; };
 		4EBAFAA016EB81E7008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA9F16EB81E7008F5BDB /* Foundation.framework */; };
 		4EBAFAA516EB81E7008F5BDB /* JNetwork.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EBAFAA416EB81E7008F5BDB /* JNetwork.h */; };
 		4EBAFAA716EB81E7008F5BDB /* JNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFAA616EB81E7008F5BDB /* JNetwork.m */; };
@@ -43,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4EB8307116F6980000004477 /* JJSONOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSONOperation.h; sourceTree = "<group>"; };
+		4EB8307216F6980000004477 /* JJSONOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSONOperation.m; sourceTree = "<group>"; };
 		4EBAFA9C16EB81E7008F5BDB /* libJNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJNetwork.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBAFA9F16EB81E7008F5BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EBAFAA316EB81E7008F5BDB /* JNetwork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JNetwork-Prefix.pch"; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				4EFABD3016EB826A00F677C2 /* JRemoteOperation.h */,
 				4EFABD3116EB826A00F677C2 /* JRemoteOperation.m */,
+				4EB8307116F6980000004477 /* JJSONOperation.h */,
+				4EB8307216F6980000004477 /* JJSONOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			files = (
 				4EBAFAA716EB81E7008F5BDB /* JNetwork.m in Sources */,
 				4EFABD3216EB826A00F677C2 /* JRemoteOperation.m in Sources */,
+				4EB8307316F6980000004477 /* JJSONOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
