@@ -41,7 +41,10 @@
     {
         NSError* error = nil;
         id json = [NSJSONSerialization JSONObjectWithData:self.receivedData options:0 error:&error];
-        _handler(YES, json, nil);
+        if(error == nil)
+            _handler(NO, json, error);
+        else
+            _handler(YES, json, nil);
     }
 }
 
