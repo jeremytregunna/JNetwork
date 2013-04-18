@@ -11,7 +11,6 @@
 		4EB8307316F6980000004477 /* JJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8307216F6980000004477 /* JJSONOperation.m */; };
 		4EBAFAA016EB81E7008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA9F16EB81E7008F5BDB /* Foundation.framework */; };
 		4EBAFAA516EB81E7008F5BDB /* JNetwork.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EBAFAA416EB81E7008F5BDB /* JNetwork.h */; };
-		4EBAFAA716EB81E7008F5BDB /* JNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFAA616EB81E7008F5BDB /* JNetwork.m */; };
 		4EBAFAAF16EB81E7008F5BDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFAAE16EB81E7008F5BDB /* SenTestingKit.framework */; };
 		4EBAFAB116EB81E7008F5BDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFAB016EB81E7008F5BDB /* UIKit.framework */; };
 		4EBAFAB216EB81E7008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA9F16EB81E7008F5BDB /* Foundation.framework */; };
@@ -53,7 +52,6 @@
 		4EBAFA9F16EB81E7008F5BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EBAFAA316EB81E7008F5BDB /* JNetwork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JNetwork-Prefix.pch"; sourceTree = "<group>"; };
 		4EBAFAA416EB81E7008F5BDB /* JNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JNetwork.h; sourceTree = "<group>"; };
-		4EBAFAA616EB81E7008F5BDB /* JNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNetwork.m; sourceTree = "<group>"; };
 		4EBAFAAD16EB81E7008F5BDB /* JNetworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JNetworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBAFAAE16EB81E7008F5BDB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EBAFAB016EB81E7008F5BDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -122,7 +120,6 @@
 			children = (
 				4EFABD2F16EB825F00F677C2 /* Operations */,
 				4EBAFAA416EB81E7008F5BDB /* JNetwork.h */,
-				4EBAFAA616EB81E7008F5BDB /* JNetwork.m */,
 				4EBAFAA216EB81E7008F5BDB /* Supporting Files */,
 			);
 			path = JNetwork;
@@ -266,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EBAFAA716EB81E7008F5BDB /* JNetwork.m in Sources */,
 				4EFABD3216EB826A00F677C2 /* JRemoteOperation.m in Sources */,
 				4EB8307316F6980000004477 /* JJSONOperation.m in Sources */,
 				4E3353FF171C2D5D00710C52 /* JImageOperation.m in Sources */,

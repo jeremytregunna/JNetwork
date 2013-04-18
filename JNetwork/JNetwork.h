@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Jeremy Tregunna. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface JNetwork : NSObject
-
-@end
+#import "JRemoteOperation.h"
+#import "JJSONOperation.h"
+#import "JImageOperation.h"
