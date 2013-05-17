@@ -88,6 +88,22 @@
         _handler(NO, nil, error);
 }
 
+- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse*)response
+{
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    NSString* code = [NSString stringWithFormat:@"%i", httpResponse.statusCode];
+    NSString* majorCase = [code substringToIndex:1];
+    if([majorCase isEqualToString:@"2"])
+        return;
+    else if([majorCase isEqualToString:@"3"])
+        return;
+    else if([majorCase isEqualToString:@"4"] || [majorCase isEqualToString:@"5"])
+    {
+        if(_handler)
+            _handler(NO, [self.receivedData copy], nil);
+    }
+}
+
 #pragma mark - Observers
 
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString*)key
